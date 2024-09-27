@@ -1,0 +1,421 @@
+* {
+    font-family: 'Freight Big Pro';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main{
+    background-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+.page1,
+.page2{
+    height: 100vh;
+    width: 100%;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    padding: 30px 50px;
+    z-index: 10;
+}
+
+#nav svg path {
+    fill: #000;
+}
+
+.page1 {
+    background-color: #F5E41B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page1 h1 {
+    font-size: 6.9vw;
+    line-height: 5vw;
+    font-weight: 100;
+    letter-spacing: -3px;
+}
+
+
+.page2 {
+    background-color: black;
+    color: white;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 99;
+}
+
+#yellow {
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 8;
+}
+
+#yellow1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 8;
+}
+
+#yellow2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 7;
+
+}
+
+#loader h1 {
+    font-size: 6.9vw;
+    line-height: 5vw;
+    font-weight: 100;
+    letter-spacing: -3px;
+    position: relative;
+    z-index: 9;
+}
+
+#loader video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+.elem{
+    position: relative;
+    width: 100%;
+    height: 110px;
+    cursor: pointer;
+}
+
+.elem h2{
+    font-weight: 100;
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 9;
+    transform: translateY(-55px);
+    line-height: 4vw;
+    font-style: normal;
+}
+
+.elem .moving{
+    background-color: #F5E41B;
+    white-space: nowrap;
+    width: 100%;
+    padding: 8px 0;
+    height: 16px;
+    position: absolute;
+    top:50%;
+    transform: translate(0, -50%) scaleY(0);
+    transition: all ease 0.3s;
+    overflow: hidden;
+}
+
+.elem .moving .moving-in{
+    display: inline-block;
+    height: 16px;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.elem .moving .moving-in h5{
+    display: inline-block;
+    color: #000;
+    font-size: 17px;
+    font-family:'Freight Big Pro';
+    margin-right: 35px;
+    text-transform: uppercase;   
+    font-weight: 650;
+    line-height: 20px; 
+    transform: translateY(-30px); 
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+
+@keyframes moving{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#e1 {
+    position: relative;
+    top: 40px; 
+}
+
+#e2 {
+    position: relative;
+    top: 0px; 
+}
+
+#e3 {
+    position: relative;
+    top: -40px; 
+}
+
+#e4 {
+    position: relative;
+    top: -80px; 
+}
+
+#e5{
+    position: relative;
+    top: 80px; 
+}
+
+.elem:hover .moving{
+    transform: translate(0, -50%) scaleY(1);
+}
+
+.elem:hover .moving h5{
+    opacity: 1;
+}
+
+.elem:hover h2{
+    font-style: italic;
+    color: #000;
+}
+
+.elem .blur{
+    position: absolute;
+    width: 28%;
+    left: 493px;
+    background: linear-gradient(to right,  #f5e31bf0, #F5E41B, #f5e31bf6);
+    box-shadow: 10px 0px 20px 20px #F5E41B, -10px 0px 20px 100px #F5E41B;
+    height: 100%;
+    transform: translate(-50, -50%);
+    top: -0.3px;
+    z-index: 8;
+}
+
+#b1{
+    width: 45%;
+    left: 380px;
+}
+
+.page3 {
+    height: 230vh;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.image-container {
+    margin: 20px;
+    display: flex;
+    width: 350px;
+    height: auto; 
+}
+
+.image-div {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.5s;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1); 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    z-index: 9;
+}
+
+.overlay p {
+    font-size: 3.5vw;
+    color: white;
+    text-align: center;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+
+.image-div:hover .overlay {
+    background-color: black;
+}
+
+.image-div:hover .overlay p {
+    opacity: 1;
+}
+
+.image-div:hover img {
+    transform: scale(1.1); 
+}
+
+
+#imc1 {
+    width: 350px;
+    height: 450px;
+}
+
+.small-image-container {
+    width: 400px;
+    height: 350px;
+}
+
+.small-image-container1 {
+    width: 430px;
+    height: 460px;
+}
+
+
+.small-image-container .image-div,
+.small-image-container1 .image-div {
+    width: 100%;
+    height: 100%;
+}
+
+.small-image-container1 .overlay p {
+    line-height: 3.5vw;
+}
+
+.small-image-container2 {
+    width: 350px;
+    height: 450px;
+    transform: translateY(-23px);
+}
+
+.small-image-container3 {
+    width: 400px;
+    height: 350px;
+    transform: translateY(-120px);
+}
+
+.small-image-container4 {
+    width: 430px;
+    height: 460px;
+    transform: translateY(-10px);
+}
+
+.small-image-container5 {
+    width: 350px;
+    height: 387px;
+    transform: translateY(-44px);
+}
+
+.small-image-container6 {
+    width: 400px;
+    height: 582px;
+    transform: translateY(-240px);
+}
+
+.small-image-container7 {
+    width: 440px;
+    height: 372px;
+    transform: translateY(-30px);
+}
+
+.small-image-container7.image-div img{
+    object-fit: cover;
+}
+
+#footer{
+    background-color: white;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#foot{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    display: flex; 
+    align-items: center;
+    padding: 0 40px; 
+    font-size: 1.2vw;
+    color: white;
+}
+
+#footer h2{
+    text-transform: uppercase;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.scroll-up img.as1 {
+    margin-left: 27px; 
+}
+
+.footer-left {
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px; 
+    margin-left: 900px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1vw;
+    cursor: pointer;
+}
